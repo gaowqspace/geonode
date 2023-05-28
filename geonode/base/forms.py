@@ -410,6 +410,10 @@ class ResourceBaseForm(TranslationModelForm):
         label=_("Data quality statement"),
         required=False,
         widget=TinyMCE())
+    custom_md = forms.CharField(
+        label=_("Custom Md"),
+        required=True,
+        widget=TinyMCE())
 
     owner = forms.ModelChoiceField(
         empty_label=_("Owner"),
